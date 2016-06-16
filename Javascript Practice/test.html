@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+var temp = prompt("Please enter a temperature in the form in 'TemperatureC' or 'TemperatureF' where Temperature is the tempurtature to convert and C is celcius and F is farhenheit", "Enter Temperature");
+
+if (temp.charAt(2)=='F') {
+	var tempF = parseInt(temp.substring(0,2))
+	var tempC =(tempF-32)*(5/9).toString()
+    document.getElementById("demo").innerHTML = tempF+"F is "+tempC+"C"
+}else{
+
+	var tempC = parseInt(temp.substring(0,2))
+	var tempF = tempC*(9/5)+32
+    document.getElementById("demo").innerHTML = tempC+"C is "+tempF+"F"
+}
+</script>
+
+</body>
+</html>
